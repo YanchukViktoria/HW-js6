@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+
+    <style>
+        .marquee-container {
+            margin: 0 auto;
+        width: 1200px; 
+        overflow: hidden; 
+        }
+
+        .marquee {
+        display: flex;
+        justify-content: space-around;
+        animation: marquee 20s linear infinite; 
+        }
+
+        .marqueeSec {
+        display: flex;
+        justify-content: space-around;
+        animation: marqueeSec 20s linear infinite; 
+        }
+
+        .marquee-third{
+            flex-direction: row-reverse;
+            animation: marqueeThird 20s linear infinite; 
+        }
+
+        @keyframes marquee {
+        0% {
+            transform: translateX(-100%); 
+        }
+        100% {
+            transform: translateX(100%); 
+        }
+    }
+
+        @keyframes marqueeSec {
+        0% {
+            transform: translateX(100%); 
+        }
+        100% {
+            transform: translateX(-100%); 
+        }
+    }
+        @keyframes marqueeThird {
+        0% {
+            transform: translateX(-100%); 
+        }
+        100% {
+            transform: translateX(100%); 
+        }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="marquee" id="marquee-container"></div>
+    </div>
+    <div>
+         <div class="marqueeSec" id="marquee-containerSec"></div>
+    </div>
+    <div>
+        <div class="marquee marquee-third" id="marquee-containerThird"></div>
+    </div>
+    <div>
+        <div class="marquee marquee-third" id="marquee-containerForth"></div>
+    </div>
+    <div>
+        <div class="marqueeSec " id="marquee-containerFifth"></div>
+    </div>
+    <div>
+        <input type="text">
+        <button>Enter</button>
+        <div class="marqueeSec marquee-third" id="marquee-containerSixth"></div>
+    </div>
+    <div>
+        <div class="marqueeSec marquee-third" id="marquee-containerSeventh"></div>
+    </div>
+    <script src="./js/script.js" tyme="module"></script>
+</body>
+</html>
